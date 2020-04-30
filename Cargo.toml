@@ -1,0 +1,18 @@
+[package]
+name = "invb"
+version = "1.0.0"
+authors = ["Chester Wu"]
+edition = "2018"
+description = "Investment portfolio balancer."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rstest = "0.6.3"
+rust_decimal = "1.4.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+panic = "abort"
+codegen-units = 1
